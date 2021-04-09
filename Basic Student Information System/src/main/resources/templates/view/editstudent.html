@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" th:href="@{/css/editstyle.css}">
+<script type="text/javascript" th:src="@{/js/newform.js}"></script>
+<title>Edit details</title>
+</head>
+
+<body>
+	<nav class=navbar>
+		<div class="container-fluid ">
+			<div class="navbar-header">
+				<h1 class="header">&nbsp;SIS&nbsp;</h1>
+			</div>
+			<div>
+				<a class="btn btn-outline-secondary" href="/" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+  				<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+ 				<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/></svg></a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<br><br>
+		<h3 class="text-center">Edit Information</h3><br>
+		<hr>
+		<br><br>
+		<form th:action="@{/save}" th:object="${student}" method="POST"
+			th:onsubmit="return validate()">
+
+			<div class="mb-4 row g-3 justify-content-center">
+				<div class="col-auto">
+					<label for="fname">Roll Number :</label>
+				</div>
+
+				<div class="col-auto">
+					<input type="text" id="rollno" name="rollno" th:field="${student.rollno}" readonly>
+					<span id="rollnumber"></span>
+				</div>
+			</div>
+
+			<div class="mb-4 row g-3 justify-content-center">
+				<div class="col-auto">
+					<label for="fname">First Name :</label>
+				</div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="col-auto">
+					<input type="text" id="fname" name="fname" th:field="${student.fname}"><br>
+					<small><span class="text-dark" id="firstname"></span></small> 
+				</div>
+			</div>
+
+			<div class="mb-4 row g-3 justify-content-center">
+				<div class="col-auto">
+					<label for="lname">Last Name :</label>
+				</div>
+				&nbsp;&nbsp;&nbsp;
+				<div class="col-auto">
+					<input type="text" id="lname" name="lname" th:field="${student.lname}"><br>
+					<small><span class="text-dark" id="lastname"></span></small> 
+				</div>
+			</div>
+
+			<div class="mb-5 row g-3 justify-content-center">
+				<div class="col-auto">
+					<label for="lname">E-mail :</label>
+				</div>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<div class="col-auto">
+					<input type="text" id="email" name="email" th:field="${student.email}"><br>
+					<small><span class="text-dark" id="emailid"></span></small>
+				</div>
+			</div>
+
+			<div class="mb-4 row g-3 justify-content-center">
+				<div class="col-auto">
+					<a class="btn btn-secondary" href="/studentlist" role="button">Cancel</a>
+				</div>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<div class="col-1"></div>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<div class="col-auto">
+					<input class="btn btn-secondary" type="submit" value="Save">
+				</div>
+			</div>
+			<br><hr>
+		</form>
+	</div>
+</body>
+</html>

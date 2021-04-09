@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/homestyle.css}">
+<title>SIS-Home</title>
+</head>
+
+<body>
+	<nav class=navbar>
+		<div class="container-fluid ">
+			<div class="navbar-header">
+				<h1 class="header">&nbsp;SIS&nbsp;</h1>
+			</div>
+			<div>
+				<a class="btn btn-outline-secondary" href="/" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+ 				<path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+  				<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/></svg></a>
+			</div>
+		</div>
+	</nav><br><br>
+	<div class="container">
+		<br>
+		<div class="row align-items-center">
+			<div class="col-1"></div>
+			<div class="col-4">
+				<div class="row">
+					<h1>
+						Welcome to<br> Student Information<br> System
+					</h1>
+				</div>
+				<br>
+				<hr>
+				<div>
+					<h5>Edit the details of the existing students or add record of
+						new student</h5>
+				</div>
+				<hr>
+				<br>
+				<div>
+					<a class="btn btn-secondary btn-md" href="studentlist"
+						type="button">List of Students</a>
+				</div>
+			</div>
+			<div class="col-1"></div>
+			<div class="col-5 text-center align-self-center">
+				<img src="student.png" class=" px-sm-2 py-sm-2"
+					alt="Student Clipart">
+			</div>
+			<div class="col-1"></div>
+		</div>
+	</div>
+</body>
+
+</html>

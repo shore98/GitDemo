@@ -1,0 +1,18 @@
+nav{
+	background-color:#FFFFFF; 
+	color: #C5C5C5;
+}
+.header{
+	background-color:#848d94; 
+	color: #FFFFFF;
+}
+body{
+	background-color: #C5C5C5;
+	color:#FFFFFF; 
+}
+span{
+	font-size: 11px;
+}
+hr{
+  border-top: 1px solid black;
+}
